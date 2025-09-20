@@ -10,6 +10,10 @@
  */
 class Solution {
     public boolean isPalindrome(ListNode head) {
+
+        if(head.next==null){
+            return true;
+        }
         ListNode slow=head;
         ListNode q1=head;
         ListNode p1=null;
