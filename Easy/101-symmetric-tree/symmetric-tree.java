@@ -16,8 +16,7 @@
 class Solution {
     public boolean compare(TreeNode rootl,TreeNode rootr){
         if(rootl==null && rootr==null) return true;
-        if(rootl==null) return false;
-        if(rootr==null) return false;
+        if(rootl==null|| rootr==null) return false;
         if(rootl.val!=rootr.val) return false;
         return compare(rootl.left,rootr.right)&&compare(rootl.right,rootr.left);
     }
