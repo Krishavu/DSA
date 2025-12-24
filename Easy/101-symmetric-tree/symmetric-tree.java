@@ -19,10 +19,7 @@ class Solution {
         if(rootl==null) return false;
         if(rootr==null) return false;
         if(rootl.val!=rootr.val) return false;
-        if(!compare(rootl.left,rootr.right)||!compare(rootl.right,rootr.left)) return false;
-        compare(rootl.left,rootr.right);
-        compare(rootl.right,rootr.left);
-        return true;
+        return compare(rootl.left,rootr.right)&&compare(rootl.right,rootr.left);
     }
 
     public boolean isSymmetric(TreeNode root) {
