@@ -5,14 +5,11 @@ class Solution {
         int r=0;
         HashMap<Character,Integer> hash=new HashMap<Character,Integer>();
         while(r<s.length()){
-            if(hash.containsKey(s.charAt(r))){
-                hash.clear();
-                l++;
-                r=l;
+            while(hash.containsKey(s.charAt(r))){
+                hash.remove(s.charAt(l++));
             }
-            int len=r-l+1;
-            maxL=Math.max(maxL,len);
             hash.put(s.charAt(r),1);
+            maxL=Math.max(maxL,r-l+1);
             r++;
         }
         return maxL;
