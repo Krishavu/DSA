@@ -2,15 +2,14 @@ class Solution {
     public int maxScore(int[] cardPoints, int k) {
         int n = cardPoints.length;
 
-        // Edge case: pick no cards
-        if (k == 0) return 0;
+        // if (k == 0) return 0;
 
-        // Edge case: pick all cards
-        if (k == n) {
-            int total = 0;
-            for (int x : cardPoints) total += x;
-            return total;
-        }
+        // // Edge case: pick all cards
+        // if (k == n) {
+        //     int total = 0;
+        //     for (int x : cardPoints) total += x;
+        //     return total;
+        // }
 
         // Initial sum: take first k cards from left
         int currentSum = 0;
