@@ -4,11 +4,9 @@ class Solution {
         int tcnt=0;
         int l=0; int r =0;
         while(r<nums.length){
-            if((nums[r]&1)==1) tcnt+=1;
+            tcnt+=nums[r]&1;
             while(tcnt>k){
-                if((nums[l]&1)==1){
-                    tcnt-=1;
-                }
+                tcnt-=nums[l]&1;
                 l++;
             }
             cnt+= r-l+1;
