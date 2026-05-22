@@ -14,7 +14,6 @@ class Solution {
             }
         }
     }
-
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
         List<Integer> ds = new ArrayList<>();
