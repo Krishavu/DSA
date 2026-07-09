@@ -3,9 +3,7 @@ class Solution {
         int n=text1.length();
         int m=text2.length();
         int [][] dp= new int[n+1][m+1];
-        for (int[] row : dp) {
-            Arrays.fill(row, -1);
-        }
+
         for(int i=0;i<=n;i++){
             dp[i][0]=0;
         }
